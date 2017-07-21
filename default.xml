@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="pyro"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/varigigi" name="minimal"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+
+  <project remote="yocto" revision="pyro" name="poky" path="sources/poky"/>
+
+  <project remote="oe" revision="pyro" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="minimal" revision="pyro" name="minimal-community-bsp-base" path="sources/base">
+	<linkfile dest="README" src="README"/>
+	<linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+</manifest>
