@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="sumo"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/varigigi" name="minimal"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/meta-qt5" name="qt5" />
+
+  <project remote="yocto" revision="sumo" name="poky" path="sources/poky"/>
+
+  <project remote="oe" revision="sumo" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="minimal" revision="sumo" name="minimal-community-bsp-base" path="sources/base">
+	<linkfile dest="README" src="README"/>
+	<linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project remote="qt5" revision="sumo" name="meta-qt5" path="sources/meta-qt5"/>
+
+</manifest>
